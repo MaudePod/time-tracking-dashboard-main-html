@@ -27,13 +27,15 @@ body{
     margin: 0;
     background-color: var(--very-dark-blue);
     container: body / inline-size;
+    display: grid;
+    place-items: center;
     min-height: 100svh;
     width: 100svw;
 }
 main {
     display: grid;
-    width: 100cqw;
-    min-height: 100cqh;
+    width: 80cqw;
+    min-height: 80cqh;
     place-items: center;
 }
 section[class="main-card-profile"] p{
