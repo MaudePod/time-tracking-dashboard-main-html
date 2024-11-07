@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="dashboard">
+    <section class="main-card">
+      <section class="main-card-top">
+        <section class="main-card-profile">
+          <img src="./images/image-jeremy.png"
+          width="234px"
+          height="234px"
+          alt="Image of user" srcset="">
+          <p>
+            Report for
+          </p>
+          <span class="user-name">
+            <span>
+              Jeremy 
+            </span>
+            <span>
+              Robson
+            </span>
+          </span>
+        </section>
+      </section>
+      <section class="main-card-bottom">
+    <menu type="timespan">
+        <label for="daily">Daily</label>
+        <input type="radio" name="select-time-period" id="daily" checked>
+        <label for="weekly">Weekly</label>
+        <input type="radio" name="select-time-period" id="weekly">
+        <label for="monthly">Monthly</label>
+        <input type="radio" name="select-time-period" id="monthly">
+      </menu>
+      </section>
+    </section>
+    <section class="card work">
+      <section class="card-top"></section>
+      <section class="card-bottom daily">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Work
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          5hrs <!-- daily -->
+        </section>
+        <section class="card-bottom-previous">
+           - 7hrs <!-- daily -->
+        </section>
+      </section>
+      <section class="card-bottom weekly">
+        <nav class="card-bottom-nav">
+        Work <img src="./images/icon-ellipsis.svg" alt="" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          32hrs <!-- weekly -->
+        </section>
+        <section class="card-bottom-previous">
+           - 36hrs <!-- weekly -->
+        </section>
+      </section>
+      <section class="card-bottom monthly">
+        <nav class="card-bottom-nav">
+        Work <img src="./images/icon-ellipsis.svg" alt="" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          103hrs <!-- monthly -->
+        </section>
+        <section class="card-bottom-previous">
+           - 128hrs <!-- monthly -->
+        </section>
+      </section>
+    </section>
+    <section class="card play">
+      <section class="card-top"></section>
+                <section class="card-bottom daily">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Play
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          1hr <!-- daily -->
+        </section>
+        <section class="card-bottom-previous">
+           - 2hrs <!-- daily -->
+        </section>
+      </section>
+      <section class="card-bottom weekly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Play
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          10hrs <!-- weekly -->
+        </section>
+        <section class="card-bottom-previous">
+           - 8hrs <!-- weekly -->
+        </section>
+      </section>
+      <section class="card-bottom monthly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Play
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+        23hrs <!-- monthly -->
+        </section>
+        <section class="card-bottom-previous">
+         - 29hrs <!-- monthly -->
+        </section>
+      </section>
+    </section>
+    <section class="card study">
+      <section class="card-top"></section>
+                <section class="card-bottom daily">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Study
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+                0hrs <!-- daily -->
+        </section>
+        <section class="card-bottom-previous">
+       - 1hr <!-- daily -->
+        </section>
+      </section>
+      <section class="card-bottom weekly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Study
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+      4hrs <!-- weekly -->
+        </section>
+        <section class="card-bottom-previous">
+       - 7hrs <!-- weekly -->
+        </section>
+      </section>
+      <section class="card-bottom monthly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Study
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+      13hrs <!-- monthly -->
+        </section>
+        <section class="card-bottom-previous">
+       - 19hrs <!-- monthly -->
+        </section>
+      </section>
+
+    </section>
+    <section class="card exercise">
+      <section class="card-top"></section>
+                <section class="card-bottom daily">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Exercise
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          1hr <!-- daily -->
+        </section>
+        <section class="card-bottom-previous">
+           - 1hr <!-- daily -->
+        </section>
+      </section>
+      <section class="card-bottom weekly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Exercise
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+        4hrs <!-- weekly -->
+        </section>
+        <section class="card-bottom-previous">
+         - 5hrs <!-- weekly -->
+        </section>
+      </section>
+      <section class="card-bottom monthly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Exercise
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+        11hrs <!-- monthly -->
+        </section>
+        <section class="card-bottom-previous">
+         - 18hrs <!-- monthly -->
+        </section>
+      </section>
+
+    </section>
+    <section class="card social">
+   
+  
+ 
+      <section class="card-top"></section>
+
+                <section class="card-bottom daily">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Social
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          1hr <!-- daily -->
+        </section>
+        <section class="card-bottom-previous">
+           - 3hrs <!-- daily -->
+        </section>
+      </section>
+      <section class="card-bottom weekly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Social
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+        5hrs <!-- weekly -->
+        </section>
+        <section class="card-bottom-previous">
+         - 10hrs <!-- weekly -->
+        </section>
+      </section>
+      <section class="card-bottom monthly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Social
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+        21hrs <!-- monthly -->
+        </section>
+        <section class="card-bottom-previous">
+         - 23hrs <!-- monthly -->
+        </section>
+      </section>
+
+    </section>
+    <section class="card self-care">
+
+
+      <section class="card-top"></section>
+      <section class="card-bottom daily">
+        <nav class="card-bottom-nav">
+      <span class="activity">
+        Self Care
+      </span>
+     <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+        0hrs <!-- daily -->
+        </section>
+        <section class="card-bottom-previous">
+         - 1hr <!-- daily -->
+        </section>
+      </section>
+      <section class="card-bottom weekly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Self Care
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          2hrs <!-- weekly -->
+        </section>
+        <section class="card-bottom-previous">
+           - 2hrs <!-- weekly -->
+        </section>
+      </section>
+      <section class="card-bottom monthly">
+        <nav class="card-bottom-nav">
+          <span class="activity">
+            Self Care
+          </span>
+         <img src="./images/icon-ellipsis.svg"  width="21px" height="5px"  alt="Select for more" srcset="">
+        </nav>
+        <section class="card-bottom-hours">
+          7hrs <!-- monthly -->
+        </section>
+        <section class="card-bottom-previous">
+           - 11hrs <!-- monthly -->
+
+        </section>
+      </section>
+
+    </section>
+  </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/MaudePod">Maude Pod</a>.
+  </div>
+</body>
+</html>

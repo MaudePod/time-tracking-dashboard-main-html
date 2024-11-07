@@ -1,0 +1,371 @@
+:root {
+    /*Primary*/
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-self-care: hsl(43, 84%, 65%);
+    /*Neutral*/
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --card-title-font-size: 18px;
+    --card-border-radius: 20px;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url("./fonts/Rubik/Rubik-VariableFont_wght.ttf");
+}
+html {
+    font-family: 'Rubik';
+    color:white;
+}
+body{
+    margin: 0;
+    background-color: var(--very-dark-blue);
+    container: body / inline-size;
+}
+main {
+    display: grid;
+    width: 100cqw;
+    min-height: 100cqh;
+    place-items: center;
+}
+section[class="main-card-profile"] p{
+    color:var(--desaturated-blue);
+}
+section[class="dashboard"] {
+    display: grid;
+    grid-template-areas:
+        "main work play study"
+        "main exercise social self-care";
+    gap: 3%;
+    width: 80cqw;
+    height: 60cqw;
+}
+
+section[class="main-card"] {
+    grid-area: main;
+    background: var(--dark-blue);
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
+}
+
+section[class="main-card-top"] {
+    height: 70%;
+    background-color: var(--blue);
+    display: grid;
+    place-items: center;
+    border-radius: var(--card-border-radius);
+}
+
+section[class="main-card-profile"] {
+    width: 80%;
+
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+section[class="main-card-profile"] img {
+    width: 100px;
+    height: 100px;
+    border-radius: 500em;
+    border: 3px solid white;
+    margin-bottom: 20%;
+}
+
+span[class="user-name"] {
+    font-size: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+section[class="main-card-bottom"] {
+    display: grid;
+    height: 30%;
+    place-items: center;
+
+}
+
+section[class="main-card-bottom"] input[type="radio"] {
+    display: none;
+}
+
+section[class="main-card-bottom"] label:hover {
+    color: white;
+}
+
+section[class="main-card-bottom"] label {
+    cursor: pointer;
+}
+
+menu[type="timespan"] {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    color: var(--desaturated-blue);
+}
+
+body:has(input[id="daily"]:checked) section[class="card-bottom weekly"],
+section[class="card-bottom monthly"] {
+    display: none;
+}
+
+body:has(input[id="daily"]:checked) label[for="daily"] {
+    color: white;
+}
+
+body:has(input[id="daily"]:checked) section[class="card-bottom daily"] {
+    display: grid;
+}
+
+body:has(input[id="weekly"]:checked) section[class="card-bottom daily"],
+section[class="card-bottom monthly"] {
+    display: none;
+}
+
+body:has(input[id="weekly"]:checked) section[class="card-bottom weekly"] {
+    display: grid;
+}
+
+body:has(input[id="weekly"]:checked) label[for="weekly"] {
+    color: white;
+}
+
+body:has(input[id="monthly"]:checked) section[class="card-bottom daily"],
+section[class="card-bottom weekly"] {
+    display: none;
+}
+
+body:has(input[id="monthly"]:checked) section[class="card-bottom monthly"] {
+    display: grid;
+}
+
+body:has(input[id="monthly"]:checked) label[for="monthly"] {
+    color: white;
+}
+
+section[class="card-bottom daily"] section[class="card-bottom-previous"]::before {
+    content: "Yesterday";
+}
+
+section[class="card-bottom weekly"] section[class="card-bottom-previous"]::before {
+    content: "Last Week";
+}
+
+section[class="card-bottom monthly"] section[class="card-bottom-previous"]::before {
+    content: "Last Month";
+}
+
+section[class~="card-bottom"] {
+    height: 80%;
+    width: 100%;
+    background-color: var(--dark-blue);
+    place-content: space-evenly;
+    border-radius: var(--card-border-radius);
+    position: relative;
+    top: -5%;
+}
+
+nav[class="card-bottom-nav"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav[class="card-bottom-nav"]:hover {
+    cursor: pointer;
+    filter: brightness(2);
+}
+
+
+section[class="card-bottom-hours"] {
+    font-size: 2.2em;
+    text-align: center;
+    justify-self: start;
+}
+
+section[class~="card-bottom"] section[class="card-bottom-previous"] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--desaturated-blue);
+}
+
+section[class="card work"] {
+    grid-area: work;
+}
+
+
+section[class="card work"] section[class="card-top"] {
+    background: var(--light-red-work);
+    background-image: url(./images/icon-work.svg);
+}
+
+section[class="card play"] {
+    grid-area: play;
+}
+
+section[class="card play"] section[class="card-top"] {
+    background: var(--soft-blue-play);
+    background-image: url(./images/icon-play.svg);
+}
+
+section[class="card study"] {
+    grid-area: study;
+}
+
+section[class="card study"] section[class="card-top"] {
+    background: var(--light-red-study);
+    background-image: url(./images/icon-study.svg);
+}
+
+section[class="card exercise"] {
+    grid-area: exercise;
+}
+
+section[class="card exercise"] section[class="card-top"] {
+    background: var(--lime-green-exercise);
+    background-image: url(./images/icon-exercise.svg);
+}
+
+section[class="card social"] {
+    grid-area: social;
+}
+
+section[class="card social"] section[class="card-top"] {
+    background: var(--violet-social);
+    background-image: url(./images/icon-social.svg);
+}
+
+section[class="card self-care"] {
+    grid-area: self-care;
+}
+
+section[class="card self-care"] section[class="card-top"] {
+    background: var(--soft-orange-self-care);
+    background-image: url(./images/icon-self-care.svg)
+}
+
+section[class~="card"] section[class="card-top"] {
+    height: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-right-radius: var(--card-border-radius);
+    border-top-left-radius: var(--card-border-radius);
+    background-position-x: right;
+}
+div[class="attribution"]{
+    position: absolute;
+    bottom: 5px;
+    left:0;
+    right: 0;
+    margin:0 auto;
+}
+section[class="top"] {}
+
+section[class="bottom"] {}
+
+
+@container body (inline-size < 1300px) {
+    section[class="dashboard"] {
+        display: grid;
+        height: auto;
+        grid-template-areas:
+            "main"
+            "work"
+            "play"
+            "study"
+            "exercise"
+            "social"
+            "self-care";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8,1fr);
+        padding:50px 0px 100px 0px;
+    }
+
+    main {
+        display: grid;
+        background-color: var(--very-dark-blue);
+    }
+
+    section[class~="card"] section[class="card-top"] {
+        height: 6dvh;
+    }
+    nav[class="card-bottom-nav"] {
+        display: contents;
+    }
+    section[class~="card-bottom"] {
+        height: 15dvh;
+        top: -10%;
+        grid-template-areas:
+            "activity ... ellipis"
+            "hours ... previous";
+    }
+
+    span[class="activity"] {
+        grid-area: activity;
+    }
+
+    nav[class="card-bottom-nav"] img {
+        grid-area: ellipis;
+        justify-self: end;
+
+    }
+
+    section[class="card-bottom-hours"] {
+        grid-area: hours;
+    }
+
+    section[class="card-bottom-previous"] {
+        grid-area: previous;
+    }
+
+    body {
+        background: var(--very-dark-blue);
+    }
+
+    menu[type="timespan"] {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    section[class="main-card-profile"] {
+        width: 90%;
+        height: 80%;
+        display: grid;
+        grid-template-areas:
+            "avatar profile-intro profile-intro"
+            "avatar user-name user-name";
+
+    }
+
+    section[class="main-card-profile"] img {
+        grid-area: avatar;
+        transform: scale(70%, 70%);
+    }
+
+    section[class="main-card-profile"] p {
+        grid-area: profile-intro;
+        margin-top: 15%;
+    }
+
+    section[class="main-card-profile"] span[class="user-name"] {
+        grid-area: user-name;
+    }
+
+    span[class="user-name"] {
+        font-size: 1.2rem;
+        text-wrap: nowrap;
+        margin-top: -25%;
+        flex-direction: row;
+        gap:10px;
+    }
+
+}
