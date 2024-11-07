@@ -47,15 +47,14 @@ section[class="dashboard"] {
         "main work play study"
         "main exercise social self-care";
     gap: 3%;
-    width: 80cqw;
-    height: 60cqw;
+    width: 80%;
+    height: 60%;
 }
 
 section[class="main-card"] {
     grid-area: main;
     background: var(--dark-blue);
-    border-bottom-left-radius: var(--card-border-radius);
-    border-bottom-right-radius: var(--card-border-radius);
+    border-radius: var(--card-border-radius);
 }
 
 section[class="main-card-top"] {
@@ -272,10 +271,6 @@ div[class="attribution"]{
     right: 0;
     margin:0 auto;
 }
-section[class="top"] {}
-
-section[class="bottom"] {}
-
 
 @container body (inline-size < 1300px) {
     section[class="dashboard"] {
@@ -292,6 +287,7 @@ section[class="bottom"] {}
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8,1fr);
         padding:50px 0px 100px 0px;
+        width: 80cqw;
     }
 
     main {
