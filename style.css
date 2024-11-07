@@ -27,6 +27,8 @@ body{
     margin: 0;
     background-color: var(--very-dark-blue);
     container: body / inline-size;
+    min-height: 100svh;
+    width: 100svw;
 }
 main {
     display: grid;
