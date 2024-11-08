@@ -74,11 +74,14 @@ section[class="main-card-profile"] {
 }
 
 section[class="main-card-profile"] img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 500em;
     border: 3px solid white;
     margin-bottom: 20%;
+}
+section[class="main-card-profile"] p {
+    margin: 0;
 }
 
 span[class="user-name"] {
@@ -367,5 +370,8 @@ div[class="attribution"]{
         flex-direction: row;
         gap:10px;
     }
-
+    section[class="main-card-profile"] img {
+        width: 100px;
+        height: 100px;
+    }
 }
